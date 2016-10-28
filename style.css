@@ -1,0 +1,117 @@
+ /*reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:normal;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 Arial,Hiragino Sans GB,\5fae\8f6f\96c5\9ed1,Helvetica,sans-serif;color:#333;outline:0;}
+body{background:#fff;}
+a{color:#333;}
+a:hover{color: #238c00;}
+
+
+/* 功能 */
+.f-fl{float: left;}
+.f-fr{float: right;}
+
+
+/* 统一调用背景图 */
+.category .icon,.sub-category .icon,.addcategory .icon,.category .delete,.sub-category .delete,.addtask .icon,.title .finish,.title .edit{background: url(./imgs/sprite.png) no-repeat 9999px 9999px;}
+
+
+
+/* 布局 */
+html,body,.g-wrap{min-width: 1000px;min-height: 480px;width: 100%;height: 100%;cursor: default;}
+.g-hd{position: absolute;left: 0;top: 0px;right: 0;min-width: 1000px;height: 60px;border-bottom: 1px solid #ccc;background-color: #ddd;}
+.g-body{position: absolute;left: 0;top: 61px;bottom: 0;right: 0;min-width: 1000px;min-height: 420px;}
+
+
+/* 模块 */
+.m-header{padding-left: 10px;height: 60px;line-height: 60px;font-size: 20px;color: #999;}
+
+.m-fl-menu,.m-sl-menu{position: relative;padding: 0 10px;width: 249px;height: 100%;border-right: 1px solid #ccc;}
+
+.m-fl-menu{background-color: #f2f2f2;}
+.m-fl-menu h3{height: 60px;line-height: 60px;font-size: 18px;}
+.m-fl-menu h3 span{padding-left: 10px;}
+
+.m-category-list,.m-task-list{position:absolute;top: 60px;bottom: 41px;overflow: auto;width: 250px;}
+/*.m-category-list ul{transition: 1s;background-color: #fafaee;height: 820px}*/
+/*.m-category-list.act{height: 36px;overflow: hidden;}*/
+.m-task-list{left: 0;top: 41px;width: 269px;}
+.m-category-list h4{margin-bottom: 16px;font-size: 18px;}
+
+.category,.sub-category{position: relative;height: 30px;line-height: 30px;}
+.category span,.sub-category span,.addcategory span,.m-tab span,.addtask span{display: inline-block;}
+.category .icon,.sub-category .icon,.addcategory .icon,.category .delete,.sub-category .delete,.addtask .icon{width: 30px;height: 20px;background-position: 10px -29px;vertical-align: middle;}
+.category .delete,.sub-category .delete{display: none;position: absolute;top: 8px;right: 4px;background-position: 10px -88px;cursor: pointer;}
+.category .name,.category .number,.addcategory .name,.addtask .name{font-size: 18px;padding-left: 10px;}
+.sub-category{padding-left: 25px;}
+.category:hover,.sub-category:hover,.category.z-crt,.sub-category.z-crt{background-color: #fff;}
+.category:hover .delete,.sub-category:hover .delete{display: inline-block;}
+.sub-category .icon{background-position: 10px -58px;}
+.sub-category .icon,.sub-category .number{font-size: 16px;padding-left: 10px;}
+.addcategory,.addtask{position:absolute;left: 0;bottom: 0;padding-left: 10px;border-top: 1px solid #ccc;width: 259px;height: 40px;line-height: 40px;background-color: #eee;cursor: pointer;}
+.addcategory .icon,.addtask .icon{height: 30px;background-position: 10px 2px;}
+
+.m-tab{padding: 6px;border-bottom: 1px solid #ccc;height: 28px;font-size: 16px;background-color: #eee;}
+.m-tab span{margin-left: 14px;padding: 4px 8px;border: 1px solid transparent;cursor: pointer;}
+.m-tab span:hover,.m-tab span.z-crt{border: 1px solid #ccc;background-color: #fff;}
+
+.m-sl-menu{padding: 0;width: 269px;}
+.m-task-list .date,.m-task-list .todo{height: 28px;line-height: 28px;}
+.m-task-list .date{padding: 0 16px;font-size: 16px;background-color: #fafaee;}
+.m-task-list .todo{padding: 0 36px;font-size: 14px;}
+.m-task-list .todo.z-finished{color: #238c00;text-decoration: line-through;}
+.m-task-list .todo:hover,.m-task-list .todo.z-crt{background-color: #f2f2f2;}
+
+.m-detail{position: absolute;top: 0;left: 540px;bottom: 0;right: 0;background-color: #fff;}
+.m-detail .title{position: relative;padding: 0 15px;border-bottom: 1px solid #ccc;height: 50px;line-height: 50px;background-color: #f2f2f2;}
+.title span{display: inline-block;}
+.title .name{font-size: 20px;font-weight: bold;}
+.title .finish,.title .edit{position: absolute;top: 14px;width: 30px;height: 30px;cursor: pointer;}
+.title .finish{right: 70px;background-position: 0 -120px;}
+.title .edit{right: 20px;background-position: 0 -150px;}
+.m-detail .date{padding: 0 15px;border-bottom: 1px solid #ccc;height: 52px;line-height: 52px;background-color: #fafaee;font-size: 18px;}
+.m-detail .content{padding: 15px;font-size: 18px;line-height: 1.8;}
+
+.m-edit label{font-size: 16px;font-weight: normal;}
+.m-edit .title input,.m-edit .date input{padding: 0 4px;width: 152px;height: 20px;margin: 0 10px;font-size: 16px;}
+.m-edit .tips{color: #f00;font-size: 12px;}
+.m-edit .title .confirm,.m-edit .title .cancel{position: absolute;top: 15px;padding: 0 4px;border: 1px solid #555;border-radius: 4px;font-size: 16px;line-height: 20px;cursor: pointer;}
+.m-edit .title .confirm{right: 75px;}
+.m-edit .title .cancel{right: 15px;}
+.m-edit .content .tips{margin-left: 183px;}
+.m-edit .content textarea{width: 300px;height: 200px;padding: 10px;margin-top: 10px;font-size: 20px;}
+
+    /* m-modal模块 */
+.m-modal{position: fixed;left: 0;top: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,0.5);text-align: center;font-size: 18px;}
+.m-modal .modal_align,.m-modal .modal_wrap{display:inline-block;vertical-align:middle;}
+.m-modal .modal_align{height:100%;width:1px;line-height:100%;}
+.m-modal .modal_wrap{position:relative;text-align:left;width:400px;-webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.4); box-shadow:2px 2px 5px rgba(0,0,0,0.4);border-radius:3px;overflow:hidden;}
+.m-modal .modal_head{background-color:#3498db;line-height:1.5;padding:6px 20px;color:#fff;border-bottom:1px solid #258cd1;}
+.m-modal .modal_body{background-color:#fff;border-top:1px solid #eee;padding:20px;height: 100px;}
+.m-modal .modal_body p{line-height: 30px;margin-bottom: 10px;}
+.m-modal .modal_body input{width: 100%;height: 30px;font-size: 20px;}
+.m-modal .modal_foot{border-top:1px solid #eee;}
+.m-modal .modal_foot:before,.m-modal .modal_foot:after{display:table;content:"";line-height:0;}
+.m-modal .modal_foot:after{clear:both;}
+.m-modal .modal_foot a{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;float:left;width:50%;background-color:#fff;padding:8px;cursor:pointer;color:#3498db;text-align:center;text-decoration:none;-webkit-transition:background-color 0.2s ease-in;-moz-transition:background-color 0.2s ease-in;transition:background-color 0.2s ease-in;}
+.m-modal .modal_foot a:hover{background-color:#71b7e6;color:#fff;}
+.m-modal .modal_foot a:active{background-color:#3498db;color:#fff;}
+.m-modal .modal_foot a:first-child{border-right:1px solid #eee;}
+@media \0screen{
+    .m-modal{filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#88000000,endColorStr=#88000000);}
+    } /* 只针对IE8的hack */
