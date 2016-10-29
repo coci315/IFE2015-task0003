@@ -2,7 +2,7 @@
     var template = 
     '<div class="m-detail">\
         <div class="title">\
-            <sapn class="name"></sapn><span class="finish" style="display:none;"></span><span class="edit" style="display:none"></span>\
+            <span class="name"></span><span class="finish" style="display:none;"></span><span class="edit" style="display:none"></span>\
         </div>\
         <div class="date">\
             <p></p>\
